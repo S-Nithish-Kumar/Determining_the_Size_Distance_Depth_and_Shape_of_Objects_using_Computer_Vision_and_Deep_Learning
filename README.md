@@ -85,7 +85,7 @@ Now, the focal length of the camera is known. Using this formula, the distance o
 A total of 16000 images were collected for four categories (circle, square, triangle, and star), of which 80% were used for training and 20% for testing.
 
 <p align="center">
-<img src="images/algorithm_for_dataset_collection.png" height="30%" width="30%">
+<img src="images/algorithm_for_dataset_collection.png" height="25%" width="25%">
 </p>
 <p align="center">Figure 3 Algorithm for dataset collection</p>
 
@@ -97,7 +97,7 @@ A total of 16000 images were collected for four categories (circle, square, tria
 <p align="center">Figure 4 Algorithm for Building and training model</p>
 
 <p align="center">
-<img src="images/architecture_of_the_model.png" height="65%" width="65%">
+<img src="images/architecture_of_the_model.png" height="80%" width="80%">
 </p>
 <p align="center">Figure 5 Architecture of the Deep Learning Model</p>
 
