@@ -42,11 +42,11 @@ A reference object can be used. The dimensions of the selected reference object 
 This method does not require a reference object; instead, the width of the background (distance from the left corner to the right corner) in the image must be known. The second method is used here as it is found to be more accurate than the first method. 
 The pixels_per_metric can be defined as, 
 <p align="center">
-Pixels_per_metric= Object_width/know_width 
+Pixels_per_metric = Object_width / know_width 
 </p>
 The width of the background in this case is 17 inches. The background width (measured in pixels) is calculated to be 1280 pixels. 
 <p align="center">
-Pixels_per_metric=1280px/17in=75 px (approximately) 
+Pixels_per_metric = 1280px / 17in = 75px (approximately) 
 </p>
 Therefore, there were approximately 75 pixels per inch in the image taken. Using this formula, the size of the objects present in any given image can be calculated.
 
@@ -54,7 +54,7 @@ Therefore, there were approximately 75 pixels per inch in the image taken. Using
 The above methodology is implemented using the OpenCV library in Python. Individual objects are detected through Canny thresholds and Contours. Using the contour area, the center of each object is found. Then the size is found using the pixel_per_metric_ratio, as seen above. Figure depicts the algorithm for measuring the size of an object.
 
 <p align="center">
-<img src="images/algorithm_for_measuring_the_size_of_the_object.png" height="20%" width="20%">
+<img src="images/algorithm_for_measuring_the_size_of_the_object.png" height="30%" width="30%">
 </p>
 <p align="center">Figure 1 Algorithm for measuring the size of the object</p>
 
@@ -62,7 +62,7 @@ The above methodology is implemented using the OpenCV library in Python. Individ
 Individual objects are detected with the help of Canny thresholds and Contours. Using the contour area, the center of each object is found. Then the center-to-center distance between the object and the reference object (the leftmost object in the image) is found by using the pixel_per_metric_ratio. Figure 6 depicts the algorithm for measuring the distance between the objects.
 
 <p align="center">
-<img src="images/algorithm_for_measuring_the_distance_between_objects.png" height="20%" width="20%">
+<img src="images/algorithm_for_measuring_the_distance_between_objects.png" height="30%" width="30%">
 </p>
 <p align="center">Figure 2 Algorithm for measuring the distance between objects</p>
 
@@ -76,7 +76,7 @@ P is the width of the reference object in pixels
 D is the measured distance from the camera to the reference object
 In this case, W=1.5 inches, P = 119 pixels (approximately), D=12 inches.
 <p align="center">
-F = (119x12)/1.5 = 952 (approximately)
+F = (119 x 12) / 1.5 = 952 (approximately)
 </p>
 Now, the focal length of the camera is known. Using this formula, the distance of the reference object from the camera is found, even after changing the distances between them.
 
@@ -85,14 +85,14 @@ Now, the focal length of the camera is known. Using this formula, the distance o
 A total of 16000 images were collected for four categories (circle, square, triangle, and star), of which 80% were used for training and 20% for testing.
 
 <p align="center">
-<img src="images/algorithm_for_dataset_collection.png" height="20%" width="20%">
+<img src="images/algorithm_for_dataset_collection.png" height="30%" width="30%">
 </p>
 <p align="center">Figure 3 Algorithm for dataset collection</p>
 
 #### Training Deep Learning Model:
 
 <p align="center">
-<img src="images/algorithm_for_building_and_training_model.png" height="20%" width="20%">
+<img src="images/algorithm_for_building_and_training_model.png" height="30%" width="30%">
 </p>
 <p align="center">Figure 4 Algorithm for Building and training model</p>
 
@@ -106,7 +106,7 @@ Fig 2 depicts the algorithm for building and training the model. The dataset is 
 #### Prediction:
 
 <p align="center">
-<img src="images/algorithm_for_predicting_a_new_image.png" height="20%" width="20%">
+<img src="images/algorithm_for_predicting_a_new_image.png" height="30%" width="30%">
 </p>
 <p align="center">Figure 6 Algorithm for predicting a new image</p>
 
@@ -126,7 +126,6 @@ Figure 4 depicts the algorithm for predicting the new image. Real-time video cap
 <img src="images\size_of_the_objects_image_2.png" height="60%" width="60%">
 <img src="images\size_of_the_objects_image_3.png" height="60%" width="60%">
 </p>
-<p align="center">Figure 3 SpeechVive</p>
 
 **_Objects drawn using Microsoft paint are classified_**
 
